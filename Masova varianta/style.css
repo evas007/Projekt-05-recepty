@@ -2,9 +2,7 @@
 html { box-sizing: border-box; }
 *, :after, :before { box-sizing: inherit; }
 
-
 /* -------------------------------------------------- */
-
 /*
 pouzivame mobile first pristup
 tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
@@ -16,7 +14,6 @@ notebook/pc:
 @media (min-width: 860px) {
 }
 */
-
 
 body {
     margin: 0;
@@ -33,8 +30,163 @@ body {
     color: silver;
 }
 
+/* hlavni blok */
+.hlavni-recept {
+    min-height: 00px;
+    border-bottom: 1px solid white;
+}
 
-/* ------------------------------- */
-/* ----- DOLE BUDE TVOJE CSS ----- */
-/* ------------------------------- */
+.recept {
+    min-height: 90px;
+    border-bottom: 1px solid white;
+}
 
+/* tablet */
+@media (min-width: 480px) {
+.doporucujeme {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hlavni-recept {
+    flex: 1 100%;
+    min-height: 250px;
+}
+
+.sloupec {
+    flex: 1 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sloupec:nth-child(2) {
+    border-right: 1px solid white;
+    
+}
+
+.recept {
+    flex: 1 100%;
+    min-height: 50px;
+}
+}
+
+/* ntb/PC */
+@media (min-width: 860px) {
+.hlavni-recept {
+    flex: 1 33.33333%;
+    border-right: 1px solid white;
+}
+
+.sloupec {
+    flex: 1 33.33333%;
+}
+
+.recept {
+    min-height: 200px;
+}
+}
+
+
+/*  textu v fotoctverecku */
+.hlavni-recept,
+.recept {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recept-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* pro tablet a pc větší odstup od okraje ramecku */
+@media (min-width: 480px) {
+.hlavni-recept,
+.recept {
+    padding: 20px;
+}
+}
+
+/* text v rámečcích */
+.recept-nazev {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.recept-meta {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+.hlavni-recept .recept-nazev {
+    font-size: 28px;
+}
+
+.recept .recept-nazev {
+    font-size: 18px;
+}
+
+
+/* tablety: */
+@media (min-width: 480px) {
+.hlavni-recept .recept-nazev {
+    font-size: 36px;
+}
+
+.recept .recept-nazev {
+    font-size: 22px;
+}
+}
+
+/* notebook/pc: */
+@media (min-width: 860px) {
+.hlavni-recept .recept-nazev {
+    font-size: 48px;
+}
+
+.recept .recept-nazev {
+    font-size: 28px;
+}
+}
+
+
+/* pozadí  */
+.hlavni-recept,
+.recept {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.hlavni-recept {
+background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('images/burger.jpg');
+}
+
+.recept2 {
+background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('images/sushi.jpg');
+}
+.recept3 {
+background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('images/kure.jpg');
+}
+.recept4 {
+background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('images/rajcata.jpg');
+}
+.recept5 {
+background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('images/grilovani.jpg');
+}
