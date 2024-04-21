@@ -32,7 +32,7 @@ body {
 
 /* hlavni blok */
 .hlavni-recept {
-    min-height: 00px;
+    min-height: 200px;
     border-bottom: 1px solid white;
 }
 
@@ -44,7 +44,7 @@ body {
 /* tablet */
 @media (min-width: 480px) {
 .doporucujeme {
-    display: flex;
+    display:flex;
     flex-wrap: wrap;
 }
 
@@ -53,21 +53,17 @@ body {
     min-height: 250px;
 }
 
-.sloupec {
-    flex: 1 50%;
-    display: flex;
-    flex-direction: column;
+.recepty {
+    min-height: 150px;
+    display:flex;
+    flex-wrap: wrap;
 }
 
-.sloupec:nth-child(2) {
-    border-right: 1px solid white;
-    
+.recept1, .recept2,.recept3,.recept4, .recept5 {
+    flex:1 50%;
+    min-height: 150px;
 }
 
-.recept {
-    flex: 1 100%;
-    min-height: 50px;
-}
 }
 
 /* ntb/PC */
@@ -77,7 +73,8 @@ body {
     border-right: 1px solid white;
 }
 
-.sloupec {
+.recepty {
+    display:flex;
     flex: 1 33.33333%;
 }
 
